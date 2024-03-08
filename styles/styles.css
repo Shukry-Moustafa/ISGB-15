@@ -1,114 +1,297 @@
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-body{
-	font-family: sans-serif;
+main {
+    margin-top: 15px;
 }
 
-main{
-	margin: 0 auto;
-	max-width: 100%;
-	width: 1200px;
-	display: flex;
-	flex-wrap: wrap;
+aside img {
+    margin-top: 18px;
 }
 
-aside{
-	display: none;
-}
-
-
-.jumbotron{
-	width: 100%;
-	background-color: lightgray;
-	padding: 48px 16px 48px 16px;
-}
-
-.text-center{
-	text-align: center;
-}
-
-.jumbotron > h1{
-	font-size: 48px;
-	margin: 12px 0;
-}
-
-.col{
-	width: 48%;
-	display: flex;
-	flex-wrap: wrap;
+.d-none {
+    display: none;
 }
 
 
-form{
-	width: 100%;
+/* Enhet 3: Större än 1181px bred */
+@media (min-width: 1182px) {
+
+    main {
+        width: 70%;
+    }
+
+    aside img {
+        width: 300px;
+    }
+
+    td {
+        width: 200px;
+        height: 200px;
+        border: 1px solid darkgray;
+        align-self: center;
+    }
+
+    table {
+        border-spacing: 0;
+    }
+
+    .col {
+        width: 49%;
+        margin-right: 2%;
+    }
+   
+    .jumbotron {
+        background-color: #DEDEDE;
+        padding: 1.5rem;
+        border-radius: 0.3rem;
+        margin: 0 0 1rem 0;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border: 1px solid #ccc; /* Ram runt formuläret */
+        border-radius: 0.5rem; /* Runda hörn för ramen */
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* Skugga för formuläret */
+        margin-bottom: 20px;
+    }
+
+
+    input[type="text"], input[type="color"] {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="color"]:focus {
+        border-color: blue;
+        outline: none;
+    }
+
+    
+    #newGame {
+        text-decoration: none;
+        color: white;
+        background-color: #2893f6;
+        padding: 6px;
+        border-radius: 0.3rem;
+    }
+
+    #div-with-a {
+        margin-top: 20px;
+    }
+
+    #newGame:hover {
+        background-color: white;
+        color: #2893f6;
+        transition: 0.3s;
+    }
+
+    .ml-auto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    html {
+        font-size: 22px;
+    }
 }
 
-#div-in-form{
-	margin: 12px 0;
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	justify-content: space-between;
-}
-
-input, label{
-	display: flex;
-	align-items: center;
-	width: 100%;
-	height: 32px;
-}
-
-input[type=text]{
-	padding: 8px;
-}
-
-#game-area{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-table{
-	border-collapse: collapse;
-}
-
-td{
-	width: 125px;
-	height: 125px;
-	border: 1px solid black;
-	text-align: center;
-	font-size: 64px;
-	font-weight: 400;
-}
 
 
-#div-with-a{
-	margin: 32px 0;
-	width: 100%;
-	display: flex;
-	justify-content: end;
-	align-items: center;
+
+/* Enhet 2: Större än 414px bred men mindre än 1181px bred */
+@media (min-width: 415px) and (max-width: 1181px) {
+
+    aside {
+        width: 30%;
+    }
+
+    aside img {
+        width: 100%;
+        
+    }
+
+    main {
+        width: 50%;
+    }
+
+    td {
+        width: 125px;
+        height: 125px;
+        border: 1px solid darkgray;
+        align-self: center;
+    }
+
+    table {
+        border-spacing: 0;
+    }
+
+    .ml-auto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    html {
+        font-size: 18px;
+    }
+
+    body {
+        padding: 0 1rem;
+    }
+    
+    .jumbotron {
+        background-color: #DEDEDE;
+        padding: 1.5rem;
+        border-radius: 0.3rem;
+        margin: 0 0 1rem 0;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border: 1px solid #ccc; /* Ram runt formuläret */
+        border-radius: 0.5rem; /* Runda hörn för ramen */
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* Skugga för formuläret */
+        margin-bottom: 20px;
+    }
+
+
+    .col {
+        margin-bottom: 1rem;
+    }
+
+    input[type="text"], input[type="color"] {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="color"]:focus {
+        border-color: blue;
+        outline: none;
+    }
+
+    #div-with-a {
+        text-align: right;
+    }
+    
+    #newGame {
+        text-decoration: none;
+        color: white;
+        background-color: #2893f6;
+        padding: 6px;
+        border-radius: 0.3rem;
+    }
+
 }
 
-#div-with-a > a{
-	padding: 12px 18px 12px 18px;
-	background-color: deepskyblue;
-	border-radius: 8px;
-	border: 1px solid black;
-	text-decoration: none;
-	color: white;
-	font-weight: 700;
-	font-size: 18px;
-}
 
-#div-with-a > a:hover{
-	background-color: dodgerblue;
-	
-}
- .hidden{
-	display: none !important;
+/* Enhet 1 - mindre än 415px bred */
+@media (max-width: 414px) {
+    html {
+        font-size: 16px;
+    }
+    
+    body {
+        font-family: "Roboto", sans-serif;
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
+    
+    .jumbotron {
+        background-color: #DEDEDE;
+        padding: 1.5rem;
+        border-radius: 0.3rem;
+        margin: 0 0 1rem 0;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border: 1px solid #ccc; /* Ram runt formuläret */
+        border-radius: 0.5rem; /* Runda hörn för ramen */
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* Skugga för formuläret */
+        margin-bottom: 20px;
+    }
+
+
+    .col {
+        margin-bottom: 1rem;
+    }
+
+    input[type="text"], input[type="color"] {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        border: 1px solid #ccc;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="color"]:focus {
+        border-color: blue;
+        outline: none;
+    }
+
+    #div-with-a {
+        text-align: right;
+    }
+    
+    #newGame {
+        text-decoration: none;
+        color: white;
+        background-color: #2893f6;
+        padding: 6px;
+        border-radius: 0.3rem;
+    }
+
+    aside {
+        display: none;
+    }
+
+    table {
+        border-spacing: 0;
+    }
+
+    td {
+        width: 125px;
+        height: 125px;
+        font-size: 50px;
+        text-align: center;
+        border: 1px solid darkgray;
+    }
 }
